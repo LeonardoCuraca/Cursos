@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mde-D4-jZI">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cursos-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Cursos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0xB-3v-7p5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0xB-3v-7p5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PoI-kR-6Qc"/>
+                            <constraint firstItem="0xB-3v-7p5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f7S-NE-c8g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xB-3v-7p5" secondAttribute="trailing" id="fW4-Hf-g64"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xB-3v-7p5" secondAttribute="bottom" id="vmb-F4-1A1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cursos" id="M89-0W-btG">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iUR-tr-fq6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eT9-Wy-vwu">
+                            <connections>
+                                <action selector="agregarCurso:" destination="BYZ-38-t0r" id="oAP-1N-6gr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0xB-3v-7p5" id="rvO-aY-9Hs"/>
+                        <segue destination="jm2-Im-gs2" kind="show" identifier="agregarSegue" id="B6K-We-Tsq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+        </scene>
+        <!--Crear Curso View Controller-->
+        <scene sceneID="FcC-gJ-fMO">
+            <objects>
+                <viewController id="jm2-Im-gs2" customClass="CrearCursoViewController" customModule="Cursos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7C-1Y-bba">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar Nuevo Curso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpd-3z-BL8">
+                                <rect key="frame" x="125" y="128" width="164.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Curso" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4W7-wu-lSU">
+                                <rect key="frame" x="40" y="189" width="334" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promedio Práctica" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JE1-wc-mic">
+                                <rect key="frame" x="40" y="249" width="334" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promedio Laboratorio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqk-3D-CmJ">
+                                <rect key="frame" x="40" y="309" width="334" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nota Examen Final" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRB-eC-qeW">
+                                <rect key="frame" x="40" y="369" width="334" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkX-Xe-hdf">
+                                <rect key="frame" x="179.5" y="439" width="55" height="30"/>
+                                <state key="normal" title="Agregar"/>
+                                <connections>
+                                    <action selector="agregar:" destination="jm2-Im-gs2" eventType="touchUpInside" id="wOe-hh-twh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xqk-3D-CmJ" firstAttribute="leading" secondItem="ug1-6S-mXB" secondAttribute="leading" constant="40" id="0Fi-v6-1am"/>
+                            <constraint firstItem="Xqk-3D-CmJ" firstAttribute="top" secondItem="JE1-wc-mic" secondAttribute="bottom" constant="30" id="9BJ-mK-hDs"/>
+                            <constraint firstItem="4W7-wu-lSU" firstAttribute="centerX" secondItem="i7C-1Y-bba" secondAttribute="centerX" id="BaW-ro-eqG"/>
+                            <constraint firstItem="OkX-Xe-hdf" firstAttribute="centerX" secondItem="i7C-1Y-bba" secondAttribute="centerX" id="Fhh-ES-YcH"/>
+                            <constraint firstItem="vRB-eC-qeW" firstAttribute="centerX" secondItem="i7C-1Y-bba" secondAttribute="centerX" id="GrF-V9-Qle"/>
+                            <constraint firstItem="ug1-6S-mXB" firstAttribute="trailing" secondItem="Xqk-3D-CmJ" secondAttribute="trailing" constant="40" id="IRX-9z-JdN"/>
+                            <constraint firstItem="ug1-6S-mXB" firstAttribute="trailing" secondItem="vRB-eC-qeW" secondAttribute="trailing" constant="40" id="KXY-OW-uz0"/>
+                            <constraint firstItem="JE1-wc-mic" firstAttribute="top" secondItem="4W7-wu-lSU" secondAttribute="bottom" constant="30" id="U48-YH-mpL"/>
+                            <constraint firstItem="ug1-6S-mXB" firstAttribute="trailing" secondItem="JE1-wc-mic" secondAttribute="trailing" constant="40" id="VeD-Uf-1vl"/>
+                            <constraint firstItem="Hpd-3z-BL8" firstAttribute="centerX" secondItem="i7C-1Y-bba" secondAttribute="centerX" id="VfP-qy-fHb"/>
+                            <constraint firstItem="vRB-eC-qeW" firstAttribute="top" secondItem="Xqk-3D-CmJ" secondAttribute="bottom" constant="30" id="WnA-pV-uij"/>
+                            <constraint firstItem="vRB-eC-qeW" firstAttribute="leading" secondItem="ug1-6S-mXB" secondAttribute="leading" constant="40" id="d6o-2r-zBi"/>
+                            <constraint firstItem="Hpd-3z-BL8" firstAttribute="top" secondItem="ug1-6S-mXB" secondAttribute="top" constant="40" id="feh-cJ-uAM"/>
+                            <constraint firstItem="4W7-wu-lSU" firstAttribute="top" secondItem="Hpd-3z-BL8" secondAttribute="bottom" constant="40" id="gMB-5D-5jI"/>
+                            <constraint firstItem="JE1-wc-mic" firstAttribute="centerX" secondItem="i7C-1Y-bba" secondAttribute="centerX" id="mQd-vL-t96"/>
+                            <constraint firstItem="OkX-Xe-hdf" firstAttribute="top" secondItem="vRB-eC-qeW" secondAttribute="bottom" constant="40" id="mnj-mj-lKd"/>
+                            <constraint firstItem="ug1-6S-mXB" firstAttribute="trailing" secondItem="4W7-wu-lSU" secondAttribute="trailing" constant="40" id="pfu-6L-9E8"/>
+                            <constraint firstItem="4W7-wu-lSU" firstAttribute="leading" secondItem="ug1-6S-mXB" secondAttribute="leading" constant="40" id="pki-9C-cRi"/>
+                            <constraint firstItem="JE1-wc-mic" firstAttribute="leading" secondItem="ug1-6S-mXB" secondAttribute="leading" constant="40" id="qte-kR-1wc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ug1-6S-mXB"/>
+                    </view>
+                    <connections>
+                        <outlet property="nomCurso" destination="4W7-wu-lSU" id="4qb-qP-blv"/>
+                        <outlet property="notaExamen" destination="vRB-eC-qeW" id="Gh3-Tf-k3Z"/>
+                        <outlet property="promLab" destination="Xqk-3D-CmJ" id="IR7-A6-KCF"/>
+                        <outlet property="promPractica" destination="JE1-wc-mic" id="PAp-u5-T77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Lf-rd-1vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="19"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MzB-Bb-LO0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mde-D4-jZI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r7m-cW-09q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KDM-KV-jkB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b70-8k-nyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="665.625"/>
+        </scene>
+    </scenes>
+</document>
